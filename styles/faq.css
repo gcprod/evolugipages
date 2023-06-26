@@ -1,0 +1,125 @@
+@font-face {
+  font-family: practice;
+  src: url(Practice-font.ttf);
+}
+#faq {
+    margin-top: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+#faq .accordion {
+    width: 770px;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #0077ff;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+
+  }
+  
+  #faq h2{
+    font-weight: 200;
+    align-content: center;
+    font-family: 'practice';
+    margin-left: 100;
+  }
+  #faq h3{
+    font-size: 17px;
+    color: #0179ff;
+    width: 7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  /* #faq h4{
+    font-size: 15px;
+    color: #0077ff;
+    width: 7;
+    font-weight: 500;
+  } */
+  
+  .accordion:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+    border: #0179ff;
+  }
+  
+  .accordion.active {
+    border-color: #0077ff;
+    border-width: 10px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-header:hover {
+    background: #0077ff;
+    border-color: #0179ff;
+    color: #fff;
+  }
+  
+  
+  .accordion-header h3 {
+    margin: 0;
+  }
+  
+  .accordion-content {
+    padding: 16px;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  @media (max-width: 820px){
+    #faq {
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  #faq .accordion {
+      justify-content: center;
+      width: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+  @media (max-width: 820px) {
+    #faq {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    #faq .accordion {
+      border-radius: 8px;
+    }
+  }
+
+  @media (min-width: 975px){
+    #faq .accordion{
+      width: 500px;
+    }
+  }

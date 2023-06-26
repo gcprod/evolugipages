@@ -1,0 +1,146 @@
+
+@font-face {
+    font-family: practice;
+    src: url(Practice-font.ttf);
+}
+#services {
+    width: 90%;
+    max-width: var(--max-width-sm);
+    margin: 0 auto; /* Mengatur margin atas dan bawah menjadi 0, dan margin kiri dan kanan menjadi auto */
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 200;
+    margin-bottom: 100;
+}
+
+#services.card {
+    background: #fff;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    box-shadow: 2px 20px 30px var(--shadow-color);
+}
+
+#services .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateX(10px);
+  transition: all ease 0.3s;
+}
+
+#services .card:hover::before {
+    content: "";
+    position: absolute;
+}
+
+#services  h2{
+    font-weight: 200;
+    font-family: 'practice';
+    margin-left: 100;
+    
+}
+#services  h3{
+    font-size: 17px;
+    color: #0179ff;
+    width: 7;
+    font-weight: 500;
+}
+
+
+#services .text strong {
+    color: #0179ff;    
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#services .card-container {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center; /* Menengahkan konten secara horizontal */
+    margin: 0 10%; /* Tambahkan margin kiri dan kanan */
+  }
+
+#services .card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative; /* Tambahkan properti position */
+    overflow: hidden; /* Tambahkan properti overflow */
+  }
+  
+  #services .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #services .card:hover::before {
+    content: "";
+    position: absolute;
+    left: -20px; /* Sesuaikan jarak dari sisi kiri kartu */
+    top: 0;
+    width: 35px; /* Sesuaikan lebar garis biru */
+    height: 100%;
+    background-color: #0179ff; /* Ganti dengan warna biru yang diinginkan */
+  }
+#services.card-container .card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+#services.card-container .card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 600px) {
+    #services {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #services .card-container {
+        margin-top: auto;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+    #services .card {
+        flex-basis: calc(50% - 20px); /* Display two cards per row */
+      }
+    
+    #services.aboutus h2 {
+      margin-left: 7%; /* Menggeser konten ke kanan */
+      margin-right: -15%;
+    }
+  }
+  @media (min-width: 600px) {
+    #services .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #services .card {
+        flex-basis: calc(50% - 20px); /* Display two cards per row */
+      }
+  }
+  @media (max-width: 360px) {
+    
+    #services .card {
+        flex-basis: calc(50% - 20px); /* Display two cards per row */
+      }
+    }
+    @media (max-width: 450px) {
+        #services .slider,
+        #team .img-container {
+            min-width: 200px;
+        }
+    }

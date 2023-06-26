@@ -1,0 +1,154 @@
+@font-face {
+    font-family: practice;
+    src: url(Practice-font.ttf);
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Tambahkan properti display dengan nilai flex */
+    justify-content: flex-end; /* Posisikan konten ke kanan */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    
+}
+
+.banner .halftone {
+    background: radial-gradient(circle at center, black 0.25rem, transparent 0);
+}
+
+.banner .box {
+    max-width: 500px;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
+    margin: 0 50px;
+    z-index: 1;
+}
+
+.banner .box::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background: var(--primary);
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    z-index: -10;
+    filter: blur(120px);
+}
+.banner .image-container {
+    width: 40%;
+    height: 50%;
+    max-height: 1000px;
+    position: absolute;
+    overflow: hidden;
+    animation: slideIn 2.5s ease forwards; /* Terapkan animasi slideIn */
+}
+  
+  .banner .image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Gambar akan ditampilkan dengan mempertahankan aspek rasio dan mengisi seluruh kontainer */
+  }
+
+.banner .box h3 {
+    color: #0179ff;
+    font-weight: 500;
+}
+
+.banner .box h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 3.8rem;
+    margin: 10px 0;
+    color: #000000;
+    font-family: 'practice';
+}
+
+.banner .box p {
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.5;
+    }
+
+.banner .box a {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background: #0179ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 25px;
+    margin-top: 25px;
+    transition: all ease 0.3s;
+}
+
+.banner .box a:hover {
+    background: transparent;
+    color: #0179ff;
+    border: 1px solid #0179ff;
+    transform: translateX(5px);
+}
+
+@media (max-width: 650px) {
+    .banner {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+        align-items: center; /* Pusatkan konten secara horizontal */
+    }
+    
+    .banner .box {
+        order: 1; /* Pindahkan box ke bawah */
+      }
+    
+      .banner .image-container {
+        width: 80%; /* Atur lebar menjadi lebih besar */
+        height: auto; /* Gunakan tinggi yang sesuai */
+        order: 2; /* Pindahkan image-container ke atas */
+      }
+    
+
+    .banner .box h1 {
+        font-size: 1.9rem;
+        line-height: 2.3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .banner .box {
+        margin: 0 10px;
+        justify-content: center;
+        top: 40%;
+    }
+}
+
+@media (width: 414px) {
+    .banner .box {
+        margin: 0 10px;
+        justify-content: center;
+        top: 40%;
+    }
+}
+
+@media (width: 390px) {
+    .banner .box {
+        margin: 0 10px;
+        justify-content: center;
+        top: 40%;
+    }
+}
+@keyframes slideIn {
+    0% {
+      transform: translateY(-100%); /* Mulai dari posisi di atas */
+      opacity: 0; /* Awal animasi dengan opasitas 0 */
+    }
+    100% {
+      transform: translateY(0); /* Akhiri di posisi normal */
+      opacity: 1; /* Selesaikan animasi dengan opasitas 1 */
+    }
+  }

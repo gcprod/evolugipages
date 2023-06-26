@@ -1,0 +1,112 @@
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    user-select: none;
+    transition: all ease-in-out 0.3s;
+}
+
+header nav {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between; /* Memindahkan header ke tengah */
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px 25px;
+}
+
+header .Logo {
+    width: 10%;
+}
+
+header .Logo i {
+    color: var(--primary);
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li a {
+    flex-grow: 1; /* Add this property to center the menu items */
+    font-size: 0.9rem;
+    margin: 0 12px;
+    color: var(--secondary);
+    transition: all ease 0.3s;
+    text-transform: capitalize;
+  }
+
+header ul li a:hover,
+header ul li a.active {
+    color: var(--primary);
+}
+header .buttoncareer {
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    color: #0179ff;
+    border: 1px solid #0179ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all ease 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header .buttoncareer:hover{
+    color: #fff;
+    background: #0179ff;
+    transform: translateX(5px);
+}
+header nav .menu_btn{
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--main);
+    display: none;
+    }
+
+/* Header Responsive */
+
+@media (max-width: 650px) {
+    header .Logo {
+        width: 30%;
+    }
+    header nav{
+        justify-content: space-between;
+    }
+    header .buttoncareer {
+        display: flex; /* Show the login button */
+        /* Other button styles */
+    }
+    header ul{
+        position: absolute;
+        top: 80%;
+        left: 0;
+        background: var(--bg-main);
+        display: block;
+        width: 100%;
+        box-shadow: 2px 20px 30px var(--shadow-color);
+        transition: all ease-in-out 0.3s;
+        height: 0px;
+        overflow: hidden;
+    } 
+
+    header ul li a{
+        display: block;
+        padding: 20px 15px;
+        border-bottom: 1px solid var(--border-color);
+        }
+        
+    header nav .menu_btn{
+        display: block;
+            }   
+}

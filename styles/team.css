@@ -1,0 +1,100 @@
+
+@font-face {
+    font-family: practice;
+    src: url(Practice-font.ttf);
+}
+#team {
+    width: 90%;
+    max-width: var(--max-width-sm);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#team .img-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+#team .slider {
+    flex: 1;
+    min-width: 400px;
+}
+
+#team .card {
+    background: #fff;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    box-shadow: 2px 20px 30px var(--shadow-color);
+}
+
+#team .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#team .card:hover::before {
+    content: "";
+    position: absolute;
+}
+
+#team .avatar {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--secondary);
+}
+
+#team .text {
+    flex: 1;
+    min-width: 200px;
+}
+#team  h2{
+    font-weight: 200;
+    font-family: 'practice';
+}
+#team  h3{
+    font-size: 17px;
+    color: #0179ff;
+    width: 7;
+    font-weight: 500;
+}
+
+
+#team .text i {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+#team .text p {
+    color: black;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 5px 0 15px 0;
+}
+
+#team .text strong {
+    color: #0179ff;    
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 450px) {
+    #team .slider,
+    #team .img-container {
+        min-width: 200px;
+    }
+}

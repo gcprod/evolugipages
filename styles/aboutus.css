@@ -1,0 +1,115 @@
+@font-face {
+    font-family: practice;
+    src: url(Practice-font.ttf);
+  }
+  
+  #aboutus {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #aboutus.aboutus h2 {
+    font-size: 24px;
+    font-weight: 100;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    top: 10px; /* Sesuaikan nilai top sesuai kebutuhan Anda */
+    font-family: 'practice';
+    margin-left: 9%; /* Menggeser konten ke kanan */
+  }
+  #aboutus.aboutus h3 {
+    font-size: 15px;
+    font-style: italic;
+    color: #0179ff;
+    
+  }
+  
+  #aboutus.aboutus p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+#aboutus .card-container {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center; /* Menengahkan konten secara horizontal */
+    margin: 0 10%; /* Tambahkan margin kiri dan kanan */
+  }
+  
+#aboutus .card {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative; /* Tambahkan properti position */
+    overflow: hidden; /* Tambahkan properti overflow */
+  }
+  
+  #aboutus .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateX(10px);
+    transition: all ease 0.3s;
+  }
+  
+  #aboutus .card:hover::before {
+    content: "";
+    position: absolute;
+    left: -20px; /* Sesuaikan jarak dari sisi kiri kartu */
+    top: 0;
+    width: 35px; /* Sesuaikan lebar garis biru */
+    height: 100%;
+    background-color: #0179ff; /* Ganti dengan warna biru yang diinginkan */
+  }
+.card-container .card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+.card-container .card p { 
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Tambahkan gaya lainnya sesuai dengan kebutuhan Anda */
+  
+  @media (max-width: 600px) {
+    #aboutus .card-container {
+        margin-top: auto;
+        margin-bottom: 100px;
+        margin-right: auto;
+
+    }
+    #aboutus .card {
+        flex-basis: calc(50% - 20px); /* Display two cards per row */
+      }
+    
+   
+  }
+  @media (min-width: 600px) {
+    
+    #aboutus .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #aboutus .card {
+        flex-basis: calc(50% - 20px); /* Display two cards per row */
+      }
+  }
+  @media (max-width: 360px) {
+    
+    #aboutus .card {
+        flex-basis: calc(50% - 20px); /* Display two cards per row */
+      }
+    }
